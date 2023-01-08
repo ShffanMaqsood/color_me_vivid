@@ -62,6 +62,7 @@ class _ImageOptionsState extends State<ImageOptions>
     return Visibility(
       visible: _isImageOptionsOpened,
       child: LiteRollingSwitch(
+        width: 110,
         iconOn: const IconData(0xf0787, fontFamily: 'MaterialIcons'),
         iconOff: Icons.image_outlined,
         textOn: '360',
@@ -82,7 +83,7 @@ class _ImageOptionsState extends State<ImageOptions>
     return Visibility(
       visible: _isImageOptionsOpened,
       child: SizedBox(
-        width: 130,
+        width: 110,
         height: 45,
         child: ElevatedButton.icon(
             onPressed: () {
@@ -91,13 +92,14 @@ class _ImageOptionsState extends State<ImageOptions>
           _isImageOptionsOpened = false;
         },
           style: ButtonStyle(
+              backgroundColor: MaterialStatePropertyAll<Color>(Colors.amberAccent!),
             shape: MaterialStateProperty.all<RoundedRectangleBorder>(
               RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(25)
               )
             )
           ),
-          icon: const ImageIcon(AssetImage('assets/360 icon.png')), label: const Text('360 Capture'),
+          icon: const ImageIcon(AssetImage('assets/icons/360 icon.png')), label: const Text('360 Capture'),
         ),
       ),
     );
@@ -107,7 +109,7 @@ class _ImageOptionsState extends State<ImageOptions>
     return Visibility(
       visible: _isImageOptionsOpened,
       child: SizedBox(
-        width: 130,
+        width: 110,
         height: 45,
         child: ElevatedButton.icon(
           onPressed: () {
